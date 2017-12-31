@@ -40,4 +40,5 @@ function fish_prompt
 
 # end
    echo -n "|"
-                                                      1,1           Top
+   end
+                                                    
