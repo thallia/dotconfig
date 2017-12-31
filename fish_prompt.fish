@@ -1,4 +1,5 @@
 function fish_prompt
+# delete comments and add them depending on which prompt you want 
   echo -n " "
   # winter
   #set_color 198c8c
