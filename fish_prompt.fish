@@ -40,5 +40,9 @@ function fish_prompt
 
 # end
    echo -n "|"
-   end
-                                                    
+   echo -n (prompt_pwd)
+   echo -n "|"
+   echo -n " "
+end
+
+                                         
