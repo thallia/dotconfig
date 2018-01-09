@@ -125,15 +125,19 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-  <number>4</number>
-  <firstdesk>1</firstdesk>
-  <names>
-    <name>core</name>
-    <name>project-1</name>
-    <name>project-2</name>
-    <name>project-3</name>
-  </names>
-  <popupTime>875</popupTime>
+      <number>5</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>core</name>
+      <name>project-1</name>
+      <name>project-2</name>
+      <name>project-3</name>
+      <name>project-4</name>
+      <!-- set names up here if you want to, like this:
+    <name>desktop 1</name>
+    <name>desktop 2</name>
+    -->
+
   <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
 </desktops>
@@ -278,6 +282,13 @@
     </action>
   </keybind>
 
+	    <!-- sleep mode -->
+    <keybind key="C-F8">
+      <action name="Execute">
+        <command>xautolock -locknow</command>
+      </action>
+    </keybind>
+
   <!-- window switching with the arrow keys -->
   <keybind key="W-S-Right">
     <action name="DirectionalCycleWindows">
@@ -379,6 +390,11 @@
       <action name="Execute">
         <command>pactl set-sink-mute @DEFAULT_SINK@ toggle</command>
       </action>
+    </keybind>
+	
+	<!-- reconfigure -->
+    <keybind key="W-F11">
+      <action name="Reconfigure"/>
     </keybind>
 
   <!-- Keybindings for running applications -->
