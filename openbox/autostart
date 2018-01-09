@@ -23,5 +23,6 @@ xrandr --output eDP-1 --scale 0.6x0.6
 #fills background correctly
 feh --bg-fill /home/thallia/Desktop/thallia_is_awesome.jpg
 #disables touchpad while typing
-syndaemon -k -i 2 -d
-                                                
+syndaemon -k -i 2 -d                             
+#uses i3lock as timeout lock
+xautolock -time 5 -locker "i3lock -i /home/thallia/Pictures/i3lock.png"
