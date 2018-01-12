@@ -1,5 +1,4 @@
 function fish_prompt
-# delete comments and add them depending on which prompt you want 
   echo -n " "
   # winter
   #set_color 198c8c
@@ -20,23 +19,23 @@ function fish_prompt
   #echo -n ">"
 
   # rainbow prompt
-  set_color e32636
-  echo -n ">"
-  set_color ff8d00
-  echo -n ">"
-  set_color 00dc6e
-  echo -n ">"
-  set_color 006eca
-  echo -n ">"
+ # set_color e32636
+ # echo -n ">"
+ # set_color ff8d00
+ # echo -n ">"
+ # set_color 00dc6e
+ # echo -n ">"
+ # set_color 006eca
+ # echo -n ">"
 
    # shiverwind
-   # echo -n ">"
-   #set_color bf72ff
-   #echo -n ">"
-   #set_color 6db5f9
-   #echo -n ">"
-   #set_color 76f69c
-   #echo -n ">"
+    echo -n ">"
+   set_color bf72ff
+   echo -n ">"
+   set_color 6db5f9
+   echo -n ">"
+   set_color 76f69c
+   echo -n ">"
 
 # end
    echo -n "|"
@@ -44,5 +43,3 @@ function fish_prompt
    echo -n "|"
    echo -n " "
 end
-
-                                         
