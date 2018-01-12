@@ -314,6 +314,13 @@
         <command>xautolock -locknow</command>
       </action>
     </keybind>
+
+    <!-- keybinding for cheatsheet -->
+    <keybind key="C-F9">
+      <action name="Execute">
+        <command>fish -c "notify-send \"(cat /home/thallia/narsil/keybinding-cheatsheet\""</command>
+      </action>
+    </keybind>
     
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
