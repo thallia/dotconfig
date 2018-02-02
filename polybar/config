@@ -1,0 +1,136 @@
+[colors]
+background = #00000000
+background-alt = #444
+foreground = #00b300 
+foreground-alt = #555
+primary = #00b300 
+secondary = #00b300
+alert = #bd2c40
+col = #00f
+
+[bar/example]
+monitor = eDP-1
+
+width = 100%
+height = 30
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 4
+line-color = {$xrdb:color1}
+border-size = 0
+border-color = #000000000
+padding-left = 1
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = mono:pixelsize=9;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = Wuncon Siji:pixelsize=9;1
+modules-left = date battery network
+#modules-right = volume wlan eth battery temperature date
+#modules-right = filesystem volume wlan eth battery temperature date
+modules-right = temperature memory 
+tray-position = right
+tray-padding = 0
+
+[module/date]
+type = internal/date
+
+interval = 1
+data = %m-%d-%Y%
+time = %H:%M
+
+format = <label>
+format-foreground = #31e3fd
+format-underline = #acfdff
+
+label = %date% %time%
+label-font = 3
+
+[module/temperature]
+type = internal/temperature
+interval = 1 ; Default
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+warn-temperature = 60
+
+format-underline = #009900
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = #990000
+
+[module/memory]
+type = internal/memory
+interval = 5
+
+format = <label> 
+format-foreground = #a337ac
+format-underline = #b53dbf
+label = RAM Avail: %gb_free%
+
+[module/battery]
+type = internal/battery
+poll-interval = 1
+time-format = %H:%M
+full-at = 99
+
+battery = BAT0
+adapter = ADP-1
+
+format-full = <label-full>
+format-full-prefix = "Full: "
+format-full-foreground = #fd8f06
+
+format-charging-prefix = "CHRG: "
+format-charging-foreground = #fd8f06
+
+format-discharging = <label-discharging>
+format-discharging-prefix = "DSCHRG: "
+format-discharging-foreground = #fd8f06
+
+format-full-underline = #4dff4d
+format-discharging-underline = #ff9a00
+format-charging-underline = #fd8f06
+
+label-charging = %percentage%% (%time%)
+label-discharging = %percentage%% (%time%)
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+
+interval = 3.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %essid% %signal%
+label-connected-foreground = #ff0040
+label-connected-underline = #ff0040
+label-disconnected = not connected
+label-disconnrcted-foreground = #001eff
+label-disconnected-underline = #001eff
+
+[module/github]
+type = internal/github
+
+token = ${file:/home/thallia/keys/githubpolybar.token}
+empty-notifications = true
+interval = 10
+format = <label>
+label = %notifications%
+label-underline = #fd8f06
+
+[module/ewmh]
+type = internal/xworkspaces
+
+pin-workspaces = true
+enable-click = false
+enable-scroll = false
+
+icon-0 = core;♚
+icon-1 = project-1;♛
+icon-2 = project-2;♜
+icon-3 = project-3;♝
+icon-4 = project-4;♞

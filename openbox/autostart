@@ -16,7 +16,7 @@
 #
 #xfce-mcs-manager &
 
-tint2 &
+polybar &
 
 #sets correct scale for HiDPI
 xrandr --output eDP-1 --scale 0.6x0.6
