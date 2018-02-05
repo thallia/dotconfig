@@ -16,7 +16,7 @@
 #
 #xfce-mcs-manager &
 
-polybar &
+polybar example &
 
 #sets correct scale for HiDPI
 xrandr --output eDP-1 --scale 0.6x0.6

@@ -321,7 +321,14 @@
         <command>fish -c "notify-send \"(cat /home/thallia/narsil/keybinding-cheatsheet\""</command>
       </action>
     </keybind>
-    
+
+    <!-- keybinding for screenshot -->
+    <keybind key="C-F7">
+      <action name="Execute">
+        <command>scrot -s -d 3 ~/screenshots/screenshot.png | xclip -selection clipboard -t image/png > ~/screenshots/screenshot.png</command>
+      </action>
+    </keybind>
+
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
       <action name="DirectionalCycleWindows">

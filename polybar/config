@@ -73,7 +73,7 @@ label = RAM Avail: %gb_free%
 type = internal/battery
 poll-interval = 1
 time-format = %H:%M
-full-at = 99
+full-at = 100
 
 battery = BAT0
 adapter = ADP-1
