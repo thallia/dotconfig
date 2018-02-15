@@ -52,7 +52,7 @@ label-font = 3
 type = internal/temperature
 interval = 1 ; Default
 thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input
 warn-temperature = 60
 
 format-underline = #009900

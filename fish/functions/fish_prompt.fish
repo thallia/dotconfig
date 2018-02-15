@@ -8,15 +8,15 @@ function fish_prompt
   #set_color e7f5f7
   #echo -n ">"
 
-  # fire
-  #set_color f6412d
-  #echo -n ">"
-  #set_color ff9800
-  #echo -n ">"
-  #set_color ffc100
-  #echo -n ">"
-  #set_color ffec19
-  #echo -n ">"
+   # fire
+  set_color f6412d
+  echo -n ">"
+  set_color ff9800
+  echo -n ">"
+  set_color ffc100
+  echo -n ">"
+  set_color ffec19
+  echo -n ">"
 
   # rainbow prompt
  # set_color e32636
@@ -29,17 +29,18 @@ function fish_prompt
  # echo -n ">"
 
    # shiverwind
-    echo -n ">"
-   set_color bf72ff
-   echo -n ">"
-   set_color 6db5f9
-   echo -n ">"
-   set_color 76f69c
-   echo -n ">"
+#    echo -n ">"
+#   set_color bf72ff
+#   echo -n ">"
+#   set_color 6db5f9
+#   echo -n ">"
+#   set_color 76f69c
+#   echo -n ">"
 
 # end
    echo -n "|"
    echo -n (prompt_pwd)
    echo -n "|"
    echo -n " "
+
 end

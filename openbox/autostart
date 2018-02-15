@@ -25,4 +25,7 @@ feh --bg-fill /home/thallia/Desktop/thallia_is_awesome.jpg
 #disables touchpad while typing
 syndaemon -k -i 2 -d
 #uses i3lock as timeout lock
-xautolock -time 10 -locker "i3lock -i /home/thallia/Pictures/i3lock.png"
+#xautolock -time 10 -locker "i3lock -i /home/thallia/Pictures/i3lock.png"
+
+#blue dragon i3lock setup
+xautolock -time 10 -locker "i3lock -t -i /home/thallia/Pictures/dragon3.png --clock --timecolor=000000FF --datecolor=000000FF --datestr='%Y, %m %A' --insidecolor=a8b9d205 --ringvercolor=6dabff05 --insidevercolor=909cab50 --ringwrongcolor=ff000050 --insidewrongcolor=ff000040 --ringcolor=00000080 --keyhlcolor=ffffff50 --bshlcolor=ffffff50 --time-font=inconsolata --date-font=inconsolata --datesize=16 --radius=110 --veriftext='hack initiated' --wrongtext='t-rekt'"
