@@ -12,7 +12,7 @@ col = #00f
 monitor = eDP-1
 
 width = 100%
-height = 30
+height = 20
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -27,12 +27,33 @@ module-margin-right = 1
 font-0 = mono:pixelsize=9;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=9;1
-modules-left = date battery network
+modules-left = i3
 #modules-right = volume wlan eth battery temperature date
 #modules-right = filesystem volume wlan eth battery temperature date
-modules-right = temperature memory 
+modules-right = date network battery temperature memory 
 tray-position = right
 tray-padding = 0
+
+[module/i3]
+type = internal/i3
+
+format <label-state><label-mode>
+
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = false
+
+label-focused = %index%
+label-focused-foreground = #cc9900
+label-focused-underline = #997300
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-padding = 2
 
 [module/date]
 type = internal/date
