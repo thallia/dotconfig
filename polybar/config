@@ -27,12 +27,15 @@ module-margin-right = 1
 font-0 = mono:pixelsize=9;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=9;1
-modules-left = i3
+modules-left = date network
+modules-center = i3
 #modules-right = volume wlan eth battery temperature date
 #modules-right = filesystem volume wlan eth battery temperature date
-modules-right = date network battery temperature memory 
+modules-right = battery temperature memory 
 tray-position = right
 tray-padding = 0
+#tray-transparent = false
+tray-background = #00000000
 
 [module/i3]
 type = internal/i3

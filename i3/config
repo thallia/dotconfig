@@ -40,17 +40,22 @@ bindsym Control+Mod1+t exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# background image
-exec_always feh --bg-fill /home/thallia/Desktop/thallia_is_awesome.jpg
-
 #scaling
 exec_always xrandr --output eDP-1 --scale 0.5x0.5
+
+# background
+exec_always feh --bg-fill /home/thallia/Desktop/thallia_is_awesome.jpg
 
 #disables touchpad while typing
 exec_always syndaemon -k -i 2 -d
 
+# enables transparency
+exec_always compton 
+
 # use xautolock with i3lock
 exec_always xautolock -time 10 -locker "i3lock -t -i /home/thallia/Pictures/dragon3.png --clock --timecolor=000000FF --datecolor=000000FF --datestr='%Y, %m %A' --insidecolor=a8b9d205 --ringvercolor=6dabff05 --insidevercolor=909cab50 --ringwrongcolor=ff000050 --insidewrongcolor=ff000040 --ringcolor=00000080 --keyhlcolor=ffffff50 --bshlcolor=ffffff50 --time-font=inconsolata --date-font=inconsolata --datesize=16 --radius=110 --veriftext='hack initiated' --wrongtext='t-rekt'"
+
+#exec_always xautolock -time 10 -locker "/home/thallia/i3lock-color/i3lock-fancy-multimonitor/lock -i ~/Pictures/dragon3.png -a '--clock --timecolor=000000FF --datecolor=000000FF --insidecolor=a8b9d205 --ringvercolor=6dabff05 --insidevercolor=909cab50 --ringwrongcolor=ff000050 --insidewrongcolor=ff000040 --ringcolor=00000080 --keyhlcolor=ffffff50 --bshlcolor=ffffff50 --time-font=inconsolata --date-font=inconsolata --datesize=16 --radius=110'"
 
 # start polybar
 exec_always --no-startup-id polybar example
