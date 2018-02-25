@@ -46,6 +46,9 @@ exec_always xrandr --output eDP-1 --scale 0.5x0.5
 # background
 exec_always feh --bg-fill /home/thallia/Desktop/thallia_is_awesome.jpg
 
+# enable power manager
+exec_always xfce4-power-manager
+
 #disables touchpad while typing
 exec_always syndaemon -k -i 2 -d
 
@@ -184,7 +187,7 @@ bindsym Control+space exec "rofi -show run"
 bindsym Control+F8 exec "xautolock -locknow"
 
 # screenshot
-bindsym Control+F7 exec "scrot -s -d 3 ~/screenshots/screenshot.png | xclip -selection clipboard -t image/png > ~/screenshots/screenshot.png"
+bindsym --release Control+F7 exec "scrot -s -d 3 ~/screenshots/screenshot.png | xclip -selection clipboard -t image/png > ~/screenshots/screenshot.png"
 
 # audio
 bindsym XF86AudioRaiseVolume  exec "amixer sset Master 2%+"
