@@ -190,9 +190,9 @@ bindsym Control+F8 exec "xautolock -locknow"
 bindsym --release Control+F7 exec "scrot -s -d 3 ~/screenshots/screenshot.png | xclip -selection clipboard -t image/png > ~/screenshots/screenshot.png"
 
 # audio
-bindsym XF86AudioRaiseVolume  exec "amixer sset Master 2%+"
-bindsym XF86AudioLowerVolume  exec "amixer sset Master 2%-"
-bindsym XF86AudioMute         exec "pactl set-sink-mute @DEFAULT_SINK@ toggel"
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl -- set-sink-volume 0 +5% 
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # brightness
 bindsym XF86MonBrightnessUp exec "bash -c 'expr $(cat /sys/class/backlight/intel_backlight/brightness) + 100 | sudo tee /sys/class/backlight/intel_backlight/brightness'"
